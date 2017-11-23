@@ -27,7 +27,7 @@ def webstop():
     os.remove("pid")
 
 def forceStop():
-    res = os.popen("bash script/webstop.sh 2>/dev/null")
+    res = os.popen("ps aux | grep 'python -m SimpleHTTPServer' | awk '{print $2}' |xargs kill 2>/dev/null")
     print("Stop Succeed!")
     os.remove("pid")
 

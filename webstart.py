@@ -42,11 +42,12 @@ def webstart(setname=None):
     url = "http://"+ip+":"+PORT+"/"
     print(url)
 
-    print("\n<(‵▽′)>------ ↓↓ 复制下列外部动态列表至防火墙设置中 ↓↓ ------")
-    
-    print(url+setname+"_ip.txt")
-    print(url+setname+"_domain.txt")
-    print(url+setname+"_url.txt")
+    if setname:
+        print("\n<(‵▽′)>------ ↓↓ 复制下列外部动态列表至防火墙设置中 ↓↓ ------")
+        
+        print(url+setname+"_ip.txt")
+        print(url+setname+"_domain.txt")
+        print(url+setname+"_url.txt")
 
     return url
 
