@@ -1,18 +1,9 @@
 # About IOCsToPaloaltoNGFW
 
-将IOCs转换为Paloalto的外部动态列表
 
-生成的外部动态列表命名依据GrabIOCs的config文件中的Setname参数，用于标识区分不同token生成的外部动态列表，例：
-```
-config文件中Setname为xxx
-则最后生成的外部动态列表文件名为
-xxx_ip.txt
-xxx_domain.txt
-xxx_url.txt
-
-```
-
-通过iocs_to_paloalto.py将IOCs数据按照分值排序将其转换为
+将IOCs转换为Paloalto的外部动态列表 
+脚本输出的来源信息文件会保存在EDL文件夹中，并开启web服务 
+外部动态列表的URL路径输出在屏幕上,可直接加入防火墙配置中  
 
 ```
 Paloalto防火墙
@@ -24,8 +15,7 @@ Paloalto防火墙
                 Dynamic URL Lists   
 ```
 
-* 脚本输出的来源信息文件会保存在EDL文件夹中，并开启web服务
-* 将外部动态列表的URL路径输出在屏幕上
+
 
 ### Installing
 
@@ -52,6 +42,16 @@ Short Form    | Long Form     | Description
   -m 80.0 | --min=80.0 |  增加信誉值过滤
   -c 500 | --count=500  | 外部动态列表的行数上限，不加此参数时默认为5000条
 
+
+生成的外部动态列表命名依据GrabIOCs的config文件中的Setname参数，用于标识区分不同token生成的外部动态列表，例：
+```
+config文件中Setname为xxx
+则最后生成的外部动态列表文件名为
+xxx_ip.txt
+xxx_domain.txt
+xxx_url.txt
+
+```
 
 **Example**
 
