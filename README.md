@@ -1,10 +1,19 @@
 # About IOCsToPaloaltoNGFW
 
 
-将IOCs转换为Paloalto的外部动态列表 
-脚本输出的来源信息文件会保存在EDL文件夹中，并开启web服务 
-外部动态列表的URL路径输出在屏幕上,可直接加入防火墙配置中  
+将IOCs转换为Paloalto的外部动态列表
 
+保存在EDL文件夹中，并开启HTTP服务
+
+外部动态列表的URL路径将在屏幕上输出
+
+```
+http://192.168.31.186:8008/20_ip.txt
+http://192.168.31.186:8008/20_domain.txt
+http://192.168.31.186:8008/20_url.txt
+```
+
+加入防火墙配置
 ```
 Paloalto防火墙
     |-- Objects
@@ -16,8 +25,7 @@ Paloalto防火墙
 ```
 
 
-
-### Installing
+## Installing
 
 git clone https://github.com/Loveforkeeps/IOCsToPaloaltoEDL.git
 
@@ -29,11 +37,11 @@ webstop.py
 ```
 拷至IOCs获取文件夹（GrabIOCs）中即可
 
-### Recommended Python Version:
+## Recommended Python Version:
 
 The recommended version for Python is **2.7.x**
 
-### Using IOCsToPaloaltoEDL
+## Using IOCsToPaloaltoEDL
 
 Short Form    | Long Form     | Description
 ------------- | ------------- |-------------
